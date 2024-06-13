@@ -112,3 +112,15 @@ form {
   justify-content: space-evenly;
   gap: 12px;
 }
+
+.download {
+  padding: 8px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.download > img {
+  width: 24px;
+  height: 24px;
+}
