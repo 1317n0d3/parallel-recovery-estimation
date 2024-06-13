@@ -1,9 +1,6 @@
 // Функция для генерации случайного цвета
 function randomColor() {
-  let color = "#";
-  for (let i = 0; i < 6; i++) {
-    color += Math.floor(Math.random() * 10);
-  }
+  color = "hsl(" + Math.random() * 360 + ", 100%, 75%)";
   return color;
 }
 
@@ -37,7 +34,7 @@ function convertMatrixToDatasets(matrix) {
       label: `P${index}(t)`,
       data: value,
       borderColor: randomColor(),
-      borderWidth: 1,
+      borderWidth: 2,
       fill: false,
     };
   });
@@ -57,4 +54,10 @@ function calculateIntervals(x1, x2) {
   }
 
   return h;
+}
+
+function setParamsValues(name, value, count = 5) {
+  for (let i = 0; i < count; i++) {
+    document.getElementById(`${name}${i + 1}`).value = value;
+  }
 }

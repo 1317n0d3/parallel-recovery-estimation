@@ -1,3 +1,7 @@
+Chart.defaults.font.size = 15;
+Chart.defaults.color = "#fff";
+Chart.defaults.borderColor = "#222222";
+
 let chart;
 let l1 = 2;
 let l2 = 2;
@@ -33,6 +37,11 @@ function drawPlot(datasets) {
         },
         y: {
           beginAtZero: true,
+        },
+      },
+      plugins: {
+        customCanvasBackgroundColor: {
+          color: "lightGreen",
         },
       },
     },

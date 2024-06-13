@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: #2e2e2e;
+  color: #e1e1e1;
 }
 
 body {
@@ -12,32 +12,65 @@ body {
   flex-direction: column;
   gap: 24px;
 
+  background-color: #222222;
+
   align-items: center;
+}
+
+.wrapper {
+  background-color: #2e2e2e;
+  border-radius: 17px;
+  padding: 22px 18px;
+  margin: 12px 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.plot {
+  background-color: #2e2e2e;
+  border-radius: 8px;
+
+  padding: 24px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 button {
   text-decoration: none;
-  background-color: transparent;
+  background-color: #0075af;
   padding: 8px 12px;
   border-radius: 8px;
   font-size: 18px;
   transition: all 0.3s ease;
   cursor: pointer;
-  border: 2px solid #848484;
+  border: none;
   font-weight: 600;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 button:hover {
-  background-color: #e4e4e4;
+  background-color: #005f8f;
 }
 
-input {
+/* input {
   border: 2px solid #848484;
   border-radius: 8px;
   padding: 8px 12px;
   font-size: 18px;
   font-weight: 600;
   width: 240px;
+} */
+
+input {
+  border: none;
+  outline: none;
+  background-color: #222222;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 18px;
+  width: 240px;
+  font-weight: 600;
 }
 
 label {
@@ -77,7 +110,5 @@ form {
 .presets {
   display: flex;
   justify-content: space-evenly;
-  width: 60%;
   gap: 12px;
-  margin-top: 24px;
 }

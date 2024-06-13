@@ -11,69 +11,71 @@
 
 <body>
   <h1>График оценки вероятностей для стратегии параллельного восстановления</h1>
-  <div class="presets">
-    <button id="preset1">λ = 2, n = 0</button>
-    <button id="preset2">λ = 0.1, n = 10</button>
-    <button id="preset3">λ = 3, n = 2</button>
-    <button id="preset4">λ = 3, n = 4</button>
-  </div>
-  <form id="paramsForm">
-    <div class="params-wrapper">
-      <div class="params">
-        <div>
-          <label for="l1">λ1:</label>
-          <input type="number" id="l1" name="l1" value="2" step="0.1" required>
-        </div>
-        <div>
-          <label for="l2">λ2:</label>
-          <input type="number" id="l2" name="l2" value="2" step="0.1" required>
-        </div>
-        <div>
-          <label for="l3">λ3:</label>
-          <input type="number" id="l3" name="l3" value="2" step="0.1" required>
-        </div>
-        <div>
-          <label for="l4">λ4:</label>
-          <input type="number" id="l4" name="l4" value="2" step="0.1" required>
-        </div>
-        <div>
-          <label for="l5">λ5:</label>
-          <input type="number" id="l5" name="l5" value="2" step="0.1" required>
-        </div>
-        <div>
-          <label for="t">t:</label>
-          <input type="number" id="t" name="t" value="1" min="1" required>
-        </div>
-      </div>
-      <div class="params">
-        <div>
-          <label for="n1">n1:</label>
-          <input type="number" id="n1" name="n1" value="0" step="0.1" required>
-        </div>
-        <div>
-          <label for="n2">n2:</label>
-          <input type="number" id="n2" name="n2" value="0" step="0.1" required>
-        </div>
-        <div>
-          <label for="n3">n3:</label>
-          <input type="number" id="n3" name="n3" value="0" step="0.1" required>
-        </div>
-        <div>
-          <label for="n4">n4:</label>
-          <input type="number" id="n4" name="n4" value="0" step="0.1" required>
-        </div>
-        <div>
-          <label for="n5">n5:</label>
-          <input type="number" id="n5" name="n5" value="0" step="0.1" required>
-        </div>
-        <div>
-          <button type="submit">Сгенерировать График</button>
-        </div>
-      </div>
+  <div class="wrapper">
+    <div class="presets">
+      <button id="preset1">λ = 2, n = 0</button>
+      <button id="preset2">λ = 0.1, n = 10</button>
+      <button id="preset3">λ = 3, n = 2</button>
+      <button id="preset4">λ = 3, n = 4</button>
     </div>
+    <form id="paramsForm">
+      <div class="params-wrapper">
+        <div class="params">
+          <div>
+            <label for="l1">λ1:</label>
+            <input type="number" id="l1" name="l1" value="2" step="0.1" required>
+          </div>
+          <div>
+            <label for="l2">λ2:</label>
+            <input type="number" id="l2" name="l2" value="2" step="0.1" required>
+          </div>
+          <div>
+            <label for="l3">λ3:</label>
+            <input type="number" id="l3" name="l3" value="2" step="0.1" required>
+          </div>
+          <div>
+            <label for="l4">λ4:</label>
+            <input type="number" id="l4" name="l4" value="2" step="0.1" required>
+          </div>
+          <div>
+            <label for="l5">λ5:</label>
+            <input type="number" id="l5" name="l5" value="2" step="0.1" required>
+          </div>
+          <div>
+            <label for="t">t:</label>
+            <input type="number" id="t" name="t" value="1" min="1" required>
+          </div>
+        </div>
+        <div class="params">
+          <div>
+            <label for="n1">n1:</label>
+            <input type="number" id="n1" name="n1" value="0" step="0.1" required>
+          </div>
+          <div>
+            <label for="n2">n2:</label>
+            <input type="number" id="n2" name="n2" value="0" step="0.1" required>
+          </div>
+          <div>
+            <label for="n3">n3:</label>
+            <input type="number" id="n3" name="n3" value="0" step="0.1" required>
+          </div>
+          <div>
+            <label for="n4">n4:</label>
+            <input type="number" id="n4" name="n4" value="0" step="0.1" required>
+          </div>
+          <div>
+            <label for="n5">n5:</label>
+            <input type="number" id="n5" name="n5" value="0" step="0.1" required>
+          </div>
+          <div>
+            <button type="submit">Сгенерировать График</button>
+          </div>
+        </div>
+      </div>
+  </div>
   </form>
 
-  <canvas id="plotCanvas"></canvas>
+  <canvas id="plotCanvas" class="plot"></canvas>
 
   <script src="./scripts/presets.js"></script>
   <script src="./scripts/utils.js"></script>
