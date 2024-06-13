@@ -54,6 +54,10 @@ document
     n4 = parseFloat(document.getElementById("n4").value);
     n5 = parseFloat(document.getElementById("n5").value);
 
+    x2 = parseInt(document.getElementById("t").value);
+
+    intvls = calculateIntervals(x1, x2);
+
     chart.destroy();
     drawPlot(getDataset(init, x1, x2, intvls, D));
   });

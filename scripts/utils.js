@@ -24,7 +24,7 @@ function timeIntervals(x1, x2, intvls) {
   let t = x1;
   let result = [];
   while (t <= x2) {
-    result.push(t);
+    result.push(`${t} с`);
     t = Math.round((t + h) * 100) / 100;
   }
 
@@ -47,4 +47,14 @@ function getDataset(init, x1, x2, intvls, D) {
   return convertMatrixToDatasets(
     transposeMatrix(rkfixed(init, x1, x2, intvls, D))
   );
+}
+
+function calculateIntervals(x1, x2) {
+  let h = (x2 - x1) * 100;
+
+  while (h > 1000) {
+    h = Math.round(h / 10);
+  }
+
+  return h;
 }
